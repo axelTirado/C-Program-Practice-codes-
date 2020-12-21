@@ -1,0 +1,57 @@
+using System;
+
+public class Program
+{
+	
+	 struct candidate 
+	{
+		public string name;
+		public int numb_votes;
+	}
+	
+	public static void Main()
+	{
+			
+		Console.WriteLine("Number of Candidates: ");
+		int Candid_numb = Convert.ToInt32(Console.ReadLine());
+		candidate[] candidate = new candidate[Candid_numb];
+		
+		for ( int i = 0; i < Candid_numb; i++)
+		{
+			Console.WriteLine("Candidate Name: ");
+			candidate[i].name = Console.ReadLine();
+			
+		}
+		
+		Console.WriteLine("How many people are voting? ");
+		
+		int amount_voters = Convert.ToInt32(Console.ReadLine());
+		string[] votes = new string[amount_voters];
+		
+		for (int y = 0; y < amount_voters; y++)
+		{
+			Console.WriteLine("Voter number "+ y + " Place your vote: ");
+			votes[y] = Console.ReadLine();
+		}
+		
+		for (int i = 0; i < Candid_numb; i++)
+		{
+			for (int j = 0; j < amount_voters; j++)
+			{
+				if (votes[j] == candidate[i].name)
+				{
+					candidate[i].numb_votes++;
+				}
+			}
+		}
+		
+		Console.WriteLine("Results....");
+		for(int i = 0; i < Candid_numb; i++)
+		{
+			Console.WriteLine("name: " + candidate[i].name);
+			Console.WriteLine("Votes: "+ candidate[i].numb_votes);
+		}
+		
+	}
+	
+}
