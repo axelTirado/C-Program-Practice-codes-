@@ -1,0 +1,50 @@
+using System;
+using System.Linq;
+
+public class Program
+{
+
+	public static void Main()
+	{
+		Console.WriteLine("Enter Credit Card Number: ");     			//Prompts User for Credit Card Number.
+		string creditCard = Console.ReadLine();              			//Stores number in a string variable.
+		int[] creditArray = new int[creditCard.Length];      			//Array for storing each number individually.
+		
+		for (int i = 0; i < creditCard.Length; i++)          			//Loop to break down credit card number to initialize Luhn's Algorithim.
+		{
+			creditArray[i] = Convert.ToInt32(creditCard[i]);
+		}
+		
+		int[] Newcredit_Array1 = new int[creditArray.Length /2];  	 	//Array To store the new number calculations.
+		int[] Newcredit_Array2 = new int[creditArray.Length /2];		//Array for storing remanding numbers.
+			
+		for (int i = creditArray.Length; i <= 0; i--)                   //Loop to calculate and stores the number in the Array. (Starting point of Luhn's Agorithim.)
+		{
+			Newcredit_Array1[i] = creditArray[i - 1] * 2;
+			
+		}
+		
+		int creditSum1 = Newcredit_Array1.Sum();                        //Sum all of the numbers in the array.
+		
+		for (int i = 0; i >= creditArray.Length; i++)                   //Loop to store remaning numbers of credit card.
+		{
+			Newcredit_Array2[i] = creditArray[i + 1];
+		}
+		
+		int creditSum2 = Newcredit_Array2.Sum();                        //Sum all of the numbers in the array.
+		
+		int validnumb = creditSum1 + creditSum2;                        //Sum of the resulting values of both arrays. (Ending Point of Luhn's Algorithim.)
+		
+		Console.WriteLine(validnumb);                                   //Number Correctness Validation. (*Currently with bug. Needs fixing.)
+		
+		if (validnumb % 10 == 0)                                        // validnumb value's last digit needs to be 0 in order to be declared a valid credit card. 
+		{
+			Console.WriteLine("Credit Card is Valid!");
+		}
+		else {Console.WriteLine("Credit Card is Not Valid!");}
+		
+		
+		
+	}
+	
+}
