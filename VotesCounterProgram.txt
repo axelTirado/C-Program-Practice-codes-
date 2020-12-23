@@ -3,7 +3,7 @@ using System;
 public class Program
 {
 	
-	 struct candidate 
+	 struct candidate                                                              //Structure containing candidate properties.
 	{
 		public string name;
 		public int numb_votes;
@@ -12,29 +12,29 @@ public class Program
 	public static void Main()
 	{
 			
-		Console.WriteLine("Number of Candidates: ");
-		int Candid_numb = Convert.ToInt32(Console.ReadLine());
-		candidate[] candidate = new candidate[Candid_numb];
+		Console.WriteLine("Number of Candidates: ");                               //Prompt User for number of candidates.
+		int Candid_numb = Convert.ToInt32(Console.ReadLine());                     //Convert input from string to integer.
+		candidate[] candidate = new candidate[Candid_numb];                        //initiate new array with candidate structure.
 		
-		for ( int i = 0; i < Candid_numb; i++)
+		for ( int i = 0; i < Candid_numb; i++)                                     //Loop that prompts for candidate names and stores them in the candidate array.
 		{
 			Console.WriteLine("Candidate Name: ");
 			candidate[i].name = Console.ReadLine();
 			
 		}
 		
-		Console.WriteLine("How many people are voting? ");
+		Console.WriteLine("How many people are voting? ");                         //Prompt User for the number of voters.
 		
-		int amount_voters = Convert.ToInt32(Console.ReadLine());
-		string[] votes = new string[amount_voters];
+		int amount_voters = Convert.ToInt32(Console.ReadLine());                   //Converts the input from string to integer.
+		string[] votes = new string[amount_voters];                                //Initiates array to contain the votes.
 		
-		for (int y = 0; y < amount_voters; y++)
+		for (int y = 0; y < amount_voters; y++)                                    //Loop that prompts for the votes and places them in the array.
 		{
 			Console.WriteLine("Voter number "+ y + " Place your vote: ");
 			votes[y] = Console.ReadLine();
 		}
 		
-		for (int i = 0; i < Candid_numb; i++)
+		for (int i = 0; i < Candid_numb; i++)                                      //Loop that compares and calculates each of the votes with the candidates.
 		{
 			for (int j = 0; j < amount_voters; j++)
 			{
@@ -45,8 +45,8 @@ public class Program
 			}
 		}
 		
-		Console.WriteLine("Results....");
-		for(int i = 0; i < Candid_numb; i++)
+		Console.WriteLine("Results....");             
+		for(int i = 0; i < Candid_numb; i++)                                       //Loop that presents the final results for each of the candidates. 
 		{
 			Console.WriteLine("name: " + candidate[i].name);
 			Console.WriteLine("Votes: "+ candidate[i].numb_votes);
