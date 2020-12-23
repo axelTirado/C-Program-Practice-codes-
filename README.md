@@ -2,7 +2,7 @@ This Repository is for the purpose of storing C# code-like practice programs
 
 
 
-[Vote Counter Program](https://support.west-wind.com)
+[Vote Counter Program]( https://axeltirado.github.io/C-Program-Practice-codes-/)
 
 
-[Credit Card Validator](https://support.west-wind.com)
+[Credit Card Validator]( https://axeltirado.github.io/C-Program-Practice-codes-/)
