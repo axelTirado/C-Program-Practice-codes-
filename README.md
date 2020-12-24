@@ -8,5 +8,5 @@ This Repository is for the purpose of storing C# code-like practice programs
 [Credit Card Validator]( https://axeltirado.github.io/C-Program-Practice-codes-/CreditCardValidation.txt)
 
 
-[ReaderGradeLevelProgram]( https://axeltirado.github.io/C-Program-Practice-codes-/ReaderGradeLevelProgram.txt)
+[Reader Grade Level Program]( https://axeltirado.github.io/C-Program-Practice-codes-/ReaderGradeLevelProgram.txt)
 
