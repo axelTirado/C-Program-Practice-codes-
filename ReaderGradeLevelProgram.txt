@@ -5,41 +5,41 @@ public class Program
 {
 	public static void Main()
 	{
-		Console.WriteLine("Text: ");
+		Console.WriteLine("Text: ");                                                          //Prompt User For any text.
 		
-		string text = Console.ReadLine();
+		string text = Console.ReadLine();                                                     //Store given text in string variable.
 		
 		
-		int numLetters = 0;
-		int numwords = 0;
-		int numsentences = 0;
+		int numLetters = 0;                                                                   //Variable to store the number of letters in text.
+		int numwords = 0;                                                                     //Variable to store the number of words in the text.
+		int numsentences = 0;                                                                 //Variable to store the number of sentences in the text.
 		
-		for (int i = 0; i < text.Length; i++ )
+		for (int i = 0; i < text.Length; i++ )                                                //Loop to initiate calculation of letters, words and sentences.
 		{
-			if (Char.IsLetter(Convert.ToChar(text[i])))
+			if (Char.IsLetter(Convert.ToChar(text[i])))                                       //Condition that takes only alphabet characters.
 			{
-				numLetters++;
+				numLetters++;                                                                 //Increment the amount of letters in text.
 			}
 			
-			if (Char.IsSeparator(Convert.ToChar(text[i])))
+			if (Char.IsSeparator(Convert.ToChar(text[i])))                                    //Conditions that take full words.
 			{
-				numwords++;
+				numwords++;                                                                   //Increment the amount of words in text.
 			}
 			
-			if (text[i] == '.' || text[i] == '!' || text[i] == '?')
+			if (text[i] == '.' || text[i] == '!' || text[i] == '?')                           //Condition that takes full sentences. 
 			{
-				numsentences++;
+				numsentences++;                                                               //Increment amount of sentences given in a text.
 			}
 		}
 		
-		float numwords2 = numwords + 1;
+		float numwords2 = numwords + 1;                                                       //Insurance for the numwords variable.
 		
-		float L = (numLetters / numwords2) *100;
-		float S = (numsentences / numwords2) *100;
+		float L = (numLetters / numwords2) *100;                                              //Average of letters per 100 words. 
+		float S = (numsentences / numwords2) *100;                                            //Average of sentences per 100 words.
 		
-		int index = Convert.ToInt32(Math.Round(0.0588 * L - 0.296 * S - 15.8));
+		int index = Convert.ToInt32(Math.Round(0.0588 * L - 0.296 * S - 15.8));               //Formula to recieve the final grade level result.
 		
-		if (index > 12){Console.WriteLine("This text is above any grade Levels");}
+		if (index > 12){Console.WriteLine("This text is above any grade Levels");}            // conditions to present above and before grade level if result is under 1 or above 12.
 		else if (index < 0){Console.WriteLine("This text is before Grade Level 1.");}
 		else {Console.WriteLine("This text is Grade level " + index + ".");}
 		
