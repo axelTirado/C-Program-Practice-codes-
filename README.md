@@ -10,3 +10,6 @@ This Repository is for the purpose of storing C# code-like practice programs
 
 [Reader Grade Level Program]( https://axeltirado.github.io/C-Program-Practice-codes-/ReaderGradeLevelProgram.txt)
 
+
+[Population Growth Lab 1 CS50 Intro](https://axeltirado.github.io/C-Program-Practice-codes-/PopulationGrowthLab1.txt.)
+
