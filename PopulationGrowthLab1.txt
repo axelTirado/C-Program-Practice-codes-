@@ -1,0 +1,40 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Start Size: ");                                                                         
+		
+		int initial = Convert.ToInt32(Console.ReadLine());                                                                                //Users input to an initial number.
+		
+		if (initial < 9)                                                                                                                  //Constraint to keep user from writing number less than 9.
+		{
+			Console.WriteLine("Error: Number has to be greater or equal to 9.");
+		}
+		else 
+		{
+			Console.WriteLine("End Size: ");
+		
+			int ending = Convert.ToInt32(Console.ReadLine());                                                                             //Users input to an ending number. 
+		
+			int yearCount = 0;                                                                                                            //Variable that keeps count of the of the years. 
+			
+			if (ending < initial)                                                                                                         //Constraint to keep user from writing a smaller number than the initial.
+			{
+				Console.WriteLine("Error: The ending number has to be greater than the initial.");
+			}
+			else
+			{
+				while (initial < ending)                                                                                                  //Calculations of the population growth per year.
+				{
+					initial = initial + (initial / 3) - (initial / 4); 
+					yearCount++;
+				}
+				Console.WriteLine("Years: " + yearCount);                                                                                //Console output of the years it takes to get to the ending number. 
+			} 
+		
+		}
+		
+	}
+}
