@@ -14,6 +14,6 @@ This Repository is for the purpose of storing C# code-like practice programs
 [Population Growth Lab 1 CS50 Intro](https://axeltirado.github.io/C-Program-Practice-codes-/PopulationGrowthLab1.txt)
 
 
-[ScrabbleGame](https://axeltirado.github.io/C-Program-Practice-codes-/ScrabbleGame.txt) 
+[ScrabbleGame](https://axeltirado.github.io/C-Program-Practice-codes-/ScrabbleGame.txt) <- Notes are unavailable at the moment.
 
 
